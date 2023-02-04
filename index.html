@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header id="header">
+    <div id="title">Gravity Simulation - <a href="https://www.youtube.com/watch?v=NlyVUAt95zE">Demo Video</a> </div>
+  </header>
+  <div id="container">
+    <div id="controls">
+      <div class="hControl" id="buttons">
+        <a href="#" role="button" id="playPauseButton" onClick="toggleFlying();">
+          <i class="fa-solid fa-play"></i>
+          <i class="fa-solid fa-pause"></i>
+        </a>
+        <a href="#" role="button" class="secondary" id="resetButton" onClick="reset();">Reset</a>
+      </div>
+      <div class="hControl" id="numBodiesInputContainer"># Bodies: <input id="numBodiesInput" type="text" value="2"></div>
+      <div class="hControl" id="mergeControl">Merge? <input id="mergeCheckbox" type="checkbox"></div>
+      <select name="simulations" id="simulations">
+        <option value="random">Random</option>
+        <option value="earthMoon">Earth & Moon</option>
+        <option value="plutoCharon">Ploto & Charon</option>
+        <option value="solarSystem">Solar System</option>
+      </select>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="20" value="10" class="slider" id="speedRange">
+
+        <p>Trails? <input id="trailsCheckbox" checked type="checkbox"> <input type="range" min="0" max="20" value="2"
+            class="slider" id="trailLength"></p>
+        <p><span id="numBodies"></span> bodies</p>
+      </div>
+    </div>
+    <div id="canvasContainer">
+      <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+  </div>
+  <script src="./particles.js"></script>
+</body>
+
+</html>

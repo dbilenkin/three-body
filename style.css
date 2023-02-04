@@ -1,0 +1,63 @@
+body {
+  margin: 0px;
+  background-color: #111111;
+  color: #bbbbbb;
+  margin-left: auto;
+  padding-bottom: 100px;
+}
+
+p {
+  color: #bbbbbb;
+}
+
+#numBodiesInput {
+  margin-bottom: 0;
+  height: 50px;
+  width: 125px;
+  color: #bbbbbb;
+}
+
+#header {
+  text-align: center;
+  padding: 20px;
+}
+
+#container {
+  width: 1060px;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  margin: 0 auto;
+}
+
+#controls {
+  border: 1px solid #666666;
+  padding: 10px;
+}
+
+.hControl {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+  color: #bbbbbb;
+}
+
+#simulations {
+  color: #bbbbbb;
+}
+
+#buttons a {
+  width: 125px;
+}
+
+#canvas {
+  border: 1px solid #666666;
+  /* background-image: linear-gradient(skyblue, white); */
+  background-color: black;
+}
+
+.slidecontainer {
+  color: #bbbbbb;
+  width: 260px;
+}
