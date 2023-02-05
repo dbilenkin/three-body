@@ -18,13 +18,6 @@
     <details id="controlHeader">
       <summary>Controls</summary>
       <div id="controls">
-        <div class="hControl" id="buttons">
-          <a href="#" role="button" id="playPauseButton" onClick="toggleFlying();">
-            <i class="fa-solid fa-play"></i>
-            <i class="fa-solid fa-pause"></i>
-          </a>
-          <a href="#" role="button" class="secondary" id="resetButton" onClick="reset();">Reset</a>
-        </div>
         <div class="hControl" id="numBodiesInputContainer"># Bodies: <input id="numBodiesInput" type="text" value="2">
         </div>
         <div class="hControl" id="mergeControl">Merge? <input id="mergeCheckbox" type="checkbox"></div>
@@ -45,6 +38,13 @@
         </div>
       </div>
     </details>
+    <div class="hControl" id="buttons">
+      <a href="#" role="button" id="playPauseButton" onClick="toggleFlying();">
+        <i class="fa-solid fa-play"></i>
+        <i class="fa-solid fa-pause"></i>
+      </a>
+      <a href="#" role="button" class="secondary" id="resetButton" onClick="reset();">Reset</a>
+    </div>
     <div id="title">Gravity Simulation - <a href="https://www.youtube.com/watch?v=NlyVUAt95zE">Demo Video</a> </div>
   </header>
   <div id="container">

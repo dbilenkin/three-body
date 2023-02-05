@@ -25,7 +25,7 @@ p {
 
 #controlHeader {
   margin-left: 60px;
-  margin-right: 100px;
+  margin-right: 20px;
   border: none;
   margin-top: 5px;
   margin-bottom: 0;
@@ -34,6 +34,18 @@ p {
 
 details[open]>summary {
   margin-bottom: 0;
+}
+
+#buttons a {
+  width: 100px;
+  height: 30px;
+  line-height: 0;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+#buttons a i {
+  line-height: 0;
 }
 
 #container {
@@ -62,10 +74,6 @@ details[open]>summary {
 
 #simulations {
   color: #bbbbbb;
-}
-
-#buttons a {
-  width: 125px;
 }
 
 #canvas {
