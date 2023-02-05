@@ -202,13 +202,13 @@ function createPlutoCharon() {
   createOrbit([pluto, charon], 122, charonSpeed);
 }
 
-function create2Bodies() {
-  g = .0001 * speed * speed;
+function createStarPlanetMoon() {
+  g = .01 * speed * speed;
   gSpeedAdj = 1 / Math.sqrt(.001 / g);
   particles[0] = {
     color: 'yellow',
-    size: 100,
-    mass: 1000000,
+    size: 50,
+    mass: 50 ** 3,
     x: centerx,
     y: centery,
     oldx: [],
@@ -218,15 +218,27 @@ function create2Bodies() {
   };
 
   particles[1] = {
-    color: 'blue',
-    size: 5,
-    mass: 125,
-    x: centerx + 200,
+    color: 'lightblue',
+    size: 4,
+    mass: 4 ** 3,
+    x: centerx + 270,
     y: centery,
     oldx: [],
     oldy: [],
     speedX: 0,
-    speedY: .5
+    speedY: -4
+  }
+
+  particles[2] = {
+    color: 'orange',
+    size: 20,
+    mass: 20 ** 3,
+    x: centerx + 250,
+    y: centery,
+    oldx: [],
+    oldy: [],
+    speedX: 0,
+    speedY: -2.2
   }
 }
 
@@ -413,7 +425,7 @@ function toggleFlying() {
 }
 
 // createWall();
-// create2Bodies();
+// createStarPlanetMoon();
 createParticles();
 // createEarlySolarSystem();
 // createStarryBackground();
@@ -470,6 +482,9 @@ function changeSimulation(e) {
       break;
     case "plutoCharon":
       createPlutoCharon();
+      break;
+    case "starPlanetMoon":
+      createStarPlanetMoon();
       break;
     case "solarSystem":
       createEarlySolarSystem();
