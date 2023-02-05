@@ -20,12 +20,26 @@ p {
 #header {
   text-align: center;
   padding: 20px;
+  display: flex;
+}
+
+#controlHeader {
+  margin-left: 60px;
+  margin-right: 100px;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+details[open]>summary {
+  margin-bottom: 0;
 }
 
 #container {
-  width: 1060px;
-  display: flex;
-  flex-direction: row;
+  width: 800px;
+  /* display: flex; */
+  /* flex-direction: row; */
   /* justify-content: space-between; */
   margin: 0 auto;
 }
@@ -33,6 +47,9 @@ p {
 #controls {
   border: 1px solid #666666;
   padding: 10px;
+  position: absolute;
+  background-color: #111111;
+  margin-top: 25px;
 }
 
 .hControl {

@@ -8,9 +8,6 @@ Number.prototype.mod = function (n) {
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-const numBodiesDisplay = document.getElementById("numBodies");
-numBodiesDisplay.innerHTML = 0;
-
 const width = 800;
 const height = 600;
 
@@ -50,6 +47,12 @@ let gSpeedAdj = 1 / Math.sqrt(.001 / g);
 let step = 0;
 const cycle = 1000;
 let flying = true;
+
+const numBodiesDisplay = document.getElementById("numBodies");
+numBodiesDisplay.innerHTML = 0;
+
+const zoomDisplay = document.getElementById("zoomDisplay");
+zoomDisplay.innerHTML = cameraZoom;
 
 const trailsCheckbox = document.getElementById("trailsCheckbox");
 const trailSlider = document.getElementById("trailLength");
@@ -186,7 +189,7 @@ function createSunEarth() {
 }
 
 function createEarthMoon() {
-  g = 10 * speed * speed;
+  g = 1 * speed * speed;
   gSpeedAdj = .065 / Math.sqrt(.001 / g);
   particles.length = 2;
   moonSpeed = .78 * speed * gSpeedAdj;
@@ -196,7 +199,6 @@ function createEarthMoon() {
 function createPlutoCharon() {
   g = 1 * speed * speed;
   gSpeedAdj = 1 / Math.sqrt(.001 / g);
-  cameraZoom = 2;
   particles.length = 2;
   charonSpeed = .11 * speed * gSpeedAdj;
   createOrbit([pluto, charon], 122, charonSpeed);
@@ -468,6 +470,7 @@ function adjustZoom(zoomAmount, zoomFactor) {
 
     // console.log(zoomAmount);
     currentScale = ctx.getTransform().a;
+    zoomDisplay.innerHTML = currentScale.toFixed(2);
   }
 }
 
